@@ -9,8 +9,12 @@ body {
 
 .header {
   color: rgb(180, 180, 180);
-  padding: 15px;
+  padding: 20px;
   display: flex;
+  position: fixed;
+  background-color: #212121;
+  width: calc(100vw - 40px);
+  top: 0;
 
   .left {
     flex: auto;
@@ -45,6 +49,7 @@ body {
   margin: auto;
   padding-top: 20px;
   margin-bottom: 326px;
+  margin-top: 120px;
 }
 
 .message {
@@ -144,6 +149,7 @@ body {
   padding: 12px;
   background: rgb(23, 23, 23);
   z-index: 10;
+  width: 50px;
 
   a {
     color: #10a37f;
