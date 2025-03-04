@@ -76,6 +76,7 @@ body {
 .how {
   text-align: center;
   opacity: 1;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
@@ -95,12 +96,12 @@ body {
   transition: height 1s ease;
 
   @media screen and (max-width: 480px) {
-    height: calc(100vh - 460px);
+    height: calc(100vh - 500px);
   }
 }
 
 .up .chat-box{
-  height: 150px;
+  height: 200px;
 
   @media screen and (max-width: 480px) {
     height: 100px;
