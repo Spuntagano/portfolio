@@ -50,6 +50,12 @@ body {
     font-size: 36px;
     font-weight: 300;
     margin: 0;
+
+    img {
+      margin-right: 13px;
+      position: relative;
+      top: 6px;
+    }
   }
 
   p {
@@ -67,6 +73,16 @@ body {
   }
 }
 
+.how {
+  text-align: center;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+.hide {
+  opacity: 0;
+}
+
 .chat-box {
   display: flex;
   flex-direction: column;
@@ -75,8 +91,8 @@ body {
   margin: auto;
   padding-top: 20px;
   height: calc(100vh - 400px);
-  margin-bottom: 50px;
   overflow-y: auto;
+  transition: height 1s ease;
 
   @media screen and (max-width: 480px) {
     height: calc(100vh - 460px);
@@ -87,7 +103,7 @@ body {
   height: 150px;
 
   @media screen and (max-width: 480px) {
-    height: 0px;
+    height: 100px;
   }
 }
 
@@ -101,6 +117,7 @@ body {
 
 .user {
   background-color: rgba(50, 50, 50, 0.85);
+  background-color: #f37635;
   align-self: flex-end;
   margin-right: 15px;
 }
@@ -142,6 +159,12 @@ body {
   font-size: 14px;
   padding: 5px 0px 15px 5px;
   color: rgb(180, 180, 180);
+}
+
+.no-more {
+  padding-left: 5px;
+  color: #ececec;
+  margin: 0;
 }
 
 .input-box {
