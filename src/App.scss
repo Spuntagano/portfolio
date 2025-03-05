@@ -51,10 +51,20 @@ body {
     font-weight: 300;
     margin: 0;
 
+    @media screen and (max-width: 480px) {
+      font-size: 24px;
+    }
+
     img {
       margin-right: 13px;
       position: relative;
       top: 6px;
+
+      @media screen and (max-width: 480px) {
+        height: 25px;
+        top: 3px;
+        margin-right: 10px;
+      }
     }
   }
 
@@ -70,17 +80,23 @@ body {
     color: #b4b4b4;
     font-size: 18px;
     margin-top: 10px;
+
+    @media screen and (max-width: 480px) {
+      margin-top: 6px;
+    }
   }
 }
 
 .how {
   text-align: center;
   opacity: 1;
+  transition: height 1s ease;
   margin-top: 0;
-  margin-bottom: 20px;
+  height: 33px;
 }
 
 .hide {
+  height: 0;
   opacity: 0;
 }
 
@@ -91,12 +107,14 @@ body {
   max-width: 600px;
   margin: auto;
   padding-top: 20px;
-  height: calc(100vh - 400px);
+  height: calc(100vh - 380px);
   overflow-y: auto;
   transition: height 1s ease;
+  margin-bottom: 10px;
 
   @media screen and (max-width: 480px) {
-    height: calc(100vh - 500px);
+    height: calc(100vh - 400px);
+    margin-bottom: 0px;
   }
 }
 

@@ -122,7 +122,7 @@ export default function App() {
 
   function addMessage(question, awnser, key) {
     if (gtag !== undefined) {
-      gtag('event', 'message', {question, awnser, key});
+      gtag('event', key, {question, awnser});
     }
 
     setMessages(messages => [...messages, {content: question, type: 'user'}]);
@@ -157,7 +157,7 @@ export default function App() {
       })}
       {typingMessage !== '' && <div className="message bot">{typingMessage}⬤</div>}
     </div>
-    <h2 className={`how ${prerequisites.size > 0 ? 'hide' : ''}`}>{language === 'fr' ? 'Comment puis-je vous aider?' : 'How can I help you today?'}</h2>
+    <h2 className={`how ${prerequisites.size > 0 ? 'hide' : ''} ${prerequisites.size > 1 ? 'none' : ''}`}>{language === 'fr' ? 'Comment puis-je vous aider?' : 'How can I help you today?'}</h2>
     <div className="input-container">
       <div className="mid">
         <div className="input">
