@@ -107,13 +107,13 @@ body {
   max-width: 600px;
   margin: auto;
   padding-top: 20px;
-  height: calc(100vh - 380px);
+  height: calc(100dvh - 380px);
   overflow-y: auto;
   transition: height 1s ease;
   margin-bottom: 10px;
 
   @media screen and (max-width: 480px) {
-    height: calc(100vh - 400px);
+    height: calc(100dvh - 400px);
     margin-bottom: 0px;
   }
 }
@@ -219,7 +219,7 @@ body {
   background: rgb(23, 23, 23);
   z-index: 10;
   width: 50px;
-  height: 100vh;
+  height: 100dvh;
   text-align: center;
   
   @media screen and (max-width: 480px) {
