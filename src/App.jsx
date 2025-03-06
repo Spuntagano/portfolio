@@ -181,8 +181,8 @@ export default function App() {
     </div>
     <div ref={chatBox} className="chat-box" id="chatBox">
       <div className="intro">
-        {language === 'fr' && <p>Hi! My name is Pierre-Luc Gagné, I'm a fullstack developer and welcome to my website. You can find my resume, relevant social media account and email address listed down below. If you have any questions, feel free to ask my state of the art AI<sup>*</sup> powered chat bot.</p>}
-        {language !== 'fr' && <p>Bonjour! Mon nom est Pierre-Luc Gagné, Je suis développeur fullstack, bienvenue sur mon site web. Vous retrouverez ici, mon CV, mes réseaux sociaux et adresse courriel listé au bas de la page. Si vous avez des questions, vous pouvez les poser à mon super chat bot propulsé par l'IA<sup>*</sup></p>}
+        {language !== 'fr' && <p>Hi! My name is Pierre-Luc Gagné, I'm a fullstack developer and welcome to my website. You can find my resume, relevant social media account and email address listed down below. If you have any questions, feel free to ask my state of the art AI<sup>*</sup> powered chat bot.</p>}
+        {language === 'fr' && <p>Bonjour! Mon nom est Pierre-Luc Gagné, Je suis développeur fullstack, bienvenue sur mon site web. Vous retrouverez ici, mon CV, mes réseaux sociaux et adresse courriel listé au bas de la page. Si vous avez des questions, vous pouvez les poser à mon super chat bot propulsé par l'IA<sup>*</sup></p>}
       </div>
       {messages.map((message, index) => {
         return <div key={index} className={`message ${message.type}`}>{message.content}</div>;
