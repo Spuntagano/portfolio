@@ -13,8 +13,9 @@ body {
 
   &:after {
     content: "";
-    position: absolute;
-    top: 0; left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%; height: 100%;
     background-image: url('../dist/bg.jpg');
     filter: grayscale(100%);
@@ -50,6 +51,19 @@ body {
     font-size: 36px;
     font-weight: 300;
     margin: 0;
+
+    span {
+      position: absolute;
+      transition: opacity 1s ease;
+    }
+
+    .delay {
+      transition-delay: 0.75s;
+    }
+
+    .nope {
+      opacity: 0;
+    }
 
     @media screen and (max-width: 480px) {
       font-size: 24px;
@@ -87,6 +101,19 @@ body {
   }
 }
 
+.intro {
+  margin: 0 15px;
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+
+    sup {
+      font-size: small;
+    }
+  }
+}
+
 .how {
   text-align: center;
   opacity: 1;
@@ -119,10 +146,10 @@ body {
 }
 
 .up .chat-box{
-  height: 200px;
+  height: 250px;
 
   @media screen and (max-width: 480px) {
-    height: 100px;
+    height: 225px;
   }
 }
 
@@ -132,6 +159,7 @@ body {
   max-width: 80%;
   word-wrap: break-word;
   margin-left: 15px;
+  white-space: pre-wrap;
 }
 
 .user {
@@ -139,6 +167,7 @@ body {
   background-color: #f37635;
   align-self: flex-end;
   margin-right: 15px;
+  color: #fff;
 }
 
 .bot {
@@ -170,7 +199,7 @@ body {
 }
 
 .yee {
-  height: 133px;
+  height: 143px;
   overflow-y: auto;
 }
 
@@ -194,11 +223,25 @@ body {
     padding: 10px;
     color: rgb(180, 180, 180);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 10px 15px 0 0;
+    margin: 15px 10px 0 10px;
     border-radius: 9999px;
     font-size: 13px;
     font-weight: 600;
     background-color: inherit;
+
+    &:hover {
+      color: #ececec;
+    }
+
+    &.glow {
+      box-shadow: 0px 0px 1rem rgba(243, 118, 53);
+      border: 1px solid rgba(243, 118, 53, 0.5);
+      
+      &:hover {
+        background-color: rgba(243, 118, 53, 0.1);
+        box-shadow: 0px 0px 1.15rem rgba(243, 118, 53);
+      }
+    }
 
     @media screen and (max-width: 480px) {
       width: 100%;
@@ -247,6 +290,15 @@ body {
       align-items: flex-end;
       width: 20px;
       height: 27px;
+
+      &:hover {
+        svg {
+          path {
+
+            fill: #ececec;
+          }
+        }
+      }
 
       &:last-child {
         margin-top: 20px;
