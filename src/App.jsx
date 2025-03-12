@@ -9,7 +9,7 @@ export default function App() {
       glow: true,
       content: {
         en: 'What is this?',
-        fr: "Qu'est ce que c'est?"
+        fr: "Qu'est-ce que c'est?"
       },
       awnser: {
         en: "Welcome to ChatPLG, A website where you can learn more about me!",
@@ -61,7 +61,7 @@ export default function App() {
       glow: false,
       content: {
         en: 'Is this really AI powered?',
-        fr: "Est-ce que vraiment propulsé par l'IA?"
+        fr: "Est-ce vraiment propulsé par l'IA?"
       },
       awnser: {
         en: "🤔🤔🤔",
@@ -133,7 +133,7 @@ Vous pouvez retrouver mon CV dans les liens situés plus bas.`
       glow: true,
       content: {
         en: 'Why should we hire you?',
-        fr: "Pourquoi est-ce qu'on devrais vous engager?"
+        fr: "Pourquoi est-ce qu'on devrait vous engager?"
       },
       awnser: {
         en: `I think that you could benefit from my vast experience building scalable and efficient software. I can bring new ideas based of my long experience working in the industry and I love engaging in conversation to find the best solution to the problem at hand.`,
@@ -198,7 +198,7 @@ Vous pouvez retrouver mon CV dans les liens situés plus bas.`
       glow: false,
       content: {
         en: 'I have a code review to do, can you help me out?',
-        fr: "Je dois faire une revue de code, est-ce que tu peux m'aider?",
+        fr: "Je dois faire une revue de code, est-ce tu peux m'aider?",
       },
       awnser: {
         en: `Just write LGTM, add a few rocket emojis and send it! 🚀🚀🚀`,
@@ -320,7 +320,7 @@ Vous pouvez retrouver mon CV dans les liens situés plus bas.`
             <div className="input-box">
               {isLoading ? <div className="loader"></div> :
                 <>
-                  {filteredQuestions.length === 0 && <p className="no-more">{language === 'fr' ? 'Wow vous m\'avez posé toute les questions possible, vous devez être vraiment intéressé envers moi! Pourquoi pas m\'envoyer un courriel pour qu\'on puisse discuter :)' : 'Wow you asked all the possible questions, you must be really interested in me! Why don\'t you send me a message and we can chat :)'}</p>}
+                  {filteredQuestions.length === 0 && <p className="no-more">{language === 'fr' ? 'Wow, vous m\'avez posé toutes les questions possibles, vous devez être vraiment intéressé envers moi! Pourquoi ne pas m\'envoyer un courriel pour qu\'on puisse discuter :)' : 'Wow, you asked all the possible questions, you must be really interested in me! Why don\'t you send me a message and we can chat :)'}</p>}
                   {filteredQuestions.map((question, index) => {
                     return <button className={`${question.glow && 'glow'}`} onClick={() => addMessage(question.content[language], question.awnser[language], question.key)} key={index}>
                       {question.content[language]}
